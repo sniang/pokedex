@@ -9,9 +9,9 @@ import Pokemon from "./Pokemon";
 const NavigationBar = () => {
   return (
     <nav>
-      <Link to="/">Home</Link>
-      <Link to="/pokedex">Pokédex</Link>
-      <Link to="/search">Search</Link>
+      <Link to="/pokedex/">Home</Link>
+      <Link to="/pokedex/pokedex">Pokédex</Link>
+      <Link to="/pokedex/search">Search</Link>
     </nav>
   );
 };
@@ -21,10 +21,10 @@ const App = () => (
     <NavigationBar />
     <div className="content">
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/pokedex" element={<Pokedex />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/pokemon" element={<Pokemon />} />
+        <Route path="/pokedex/" element={<Home />} />
+        <Route path="/pokedex/pokedex" element={<Pokedex />} />
+        <Route path="/pokedex/search" element={<Search />} />
+        <Route path="/pokedex/pokemon" element={<Pokemon />} />
       </Routes>
     </div>
   </BrowserRouter>
